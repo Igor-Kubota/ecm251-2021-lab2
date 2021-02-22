@@ -2,7 +2,7 @@
 repositório criado para a disciplina Linguagens 1 
 
 # Desenvolvedor (a): 
-## Igor Eiki Ferreira Kubota
+- Igor Eiki Ferreira Kubota
 
 # Linguagens e FrameWorks: 
 - Java
