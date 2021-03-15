@@ -24,9 +24,30 @@ public class Sistema {
                 System.out.println("Obrigado por ter utilizado o Sistema");
                 this.executarsistema = false;
                 break;
+
+            case 1:
+                System.out.println("Saldo: R$ "+ this.conta.getSaldo());
+                break;
+
+            case 2:
+                System.out.println("Informe o valor para depositar: ");
+                double valorParaDepositar = scanner.nextDouble();
+                this.conta.depositar(valorParaDepositar);
+                System.out.println("Operação Realizada com Sucesso!");
+                break;
+
+            //case 3:
+
+
+
+
+
+
+
             default:
                 System.out.println("Opção ainda nao implementada\n");
                 break;
+
 
 
 
@@ -38,7 +59,7 @@ public class Sistema {
         this.executarsistema = true;
         this.scanner = new Scanner(System.in);  //Cria um scanner para o
                                                 // teclado (entrada padrão)
-        
+
         this.conta = new Conta("Luigi", 1235, 1000);
 
     }
