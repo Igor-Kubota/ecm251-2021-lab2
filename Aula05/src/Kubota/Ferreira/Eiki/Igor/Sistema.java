@@ -6,17 +6,32 @@ public class Sistema {
     private boolean executarsistema;
     private Scanner scanner;
 
+
     public void executar(){
         int opcao;
         while(executarsistema) {
             exibirmenu();
             opcao = scanner.nextInt();
+            avaliarOpcao(opcao);
+
+        }
+    }
+
+    private void avaliarOpcao(int opcao) {
+        switch (opcao){
+            case 0:
+                System.out.println("Obrigado por ter utilizado o Sistema");
+                this.executarsistema = false;
+                break;
+            default:
+                System.out.println("Opção ainda nao implementada");
+                break;
+
 
 
 
         }
     }
-
 
     public Sistema(){
         this.executarsistema = true;
