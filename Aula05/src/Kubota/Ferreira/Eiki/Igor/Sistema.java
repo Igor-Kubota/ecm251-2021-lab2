@@ -26,23 +26,42 @@ public class Sistema {
                 break;
 
             case 1:
-                System.out.println("Saldo: R$ "+ this.conta.getSaldo());
+                System.out.println("Saldo: R$ "+ this.conta.getSaldo() + "\n");
                 break;
 
             case 2:
                 System.out.println("Informe o valor para depositar: ");
                 double valorParaDepositar = scanner.nextDouble();
                 this.conta.depositar(valorParaDepositar);
-                System.out.println("Operação Realizada com Sucesso!");
+                System.out.println("Operação Realizada com Sucesso!\n");
                 break;
 
-            //case 3:
+            case 3:
+                System.out.println("Informe o Valor para Sacar: ");
+                double valorParaSacar = scanner.nextDouble();
+                if(this.conta.Sacar(valorParaSacar)){
+                    System.out.println("Operação realizada com sucesso!\n");
+                } else{
+                    System.out.println("Algo de Errado aconteceu: Saldo\n");
+                }
+                break;
 
-
-
-
-
-
+            case 5:
+                System.out.println("Nome do Titulo a pagar: ");
+                String nomeTitulo = scanner.next();
+                System.out.println("Valor do Titulo: ");
+                double valorTitulo = scanner.nextDouble();
+                System.out.println("Valor do juros por dia: ");
+                double valorJurosPorDia = scanner.nextDouble();
+                System.out.println("Informe a data de Vencimento (aaaa-mm-dd): ");
+                String dataVencimentoTitulo = scanner.next();
+                Titulo titulo = new Titulo(valorTitulo,nomeTitulo,valorJurosPorDia,dataVencimentoTitulo);
+                if(this.conta.Sacar(titulo.getvalorPagamento())){
+                    System.out.println("Operação Realizada com Sucesso!\n");
+                }else{
+                    System.out.println("Não foi possível realizar a Operação");
+                }
+                break;
 
             default:
                 System.out.println("Opção ainda nao implementada\n");
