@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Sistema {
     private boolean executarsistema;
     private Scanner scanner;
+    private Conta conta;
 
 
     public void executar(){
@@ -24,7 +25,7 @@ public class Sistema {
                 this.executarsistema = false;
                 break;
             default:
-                System.out.println("Opção ainda nao implementada");
+                System.out.println("Opção ainda nao implementada\n");
                 break;
 
 
@@ -35,7 +36,11 @@ public class Sistema {
 
     public Sistema(){
         this.executarsistema = true;
-        this.scanner = new Scanner(System.in);
+        this.scanner = new Scanner(System.in);  //Cria um scanner para o
+                                                // teclado (entrada padrão)
+        
+        this.conta = new Conta("Luigi", 1235, 1000);
+
     }
 
     private void exibirmenu() {

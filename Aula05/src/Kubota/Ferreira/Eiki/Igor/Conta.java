@@ -2,26 +2,37 @@ package Kubota.Ferreira.Eiki.Igor;
 
 public class Conta {
     //atributos
-    Cliente cliente;
-    int Numero;
-    double Saldo;
+    private Cliente cliente;
+    private int Numero;
+    private double Saldo;
 
     //metodos
-    void visualizarSaldo(){
-        System.out.println("Valor do Saldo: R$"+ this.Saldo);
+
+
+    public Conta(String cliente, int numero, double saldo) {
+        this.cliente = new Cliente(cliente);
+        this.Numero = numero;
+        this.Saldo = saldo;
     }
-    boolean Sacar(double valor){
+
+    public double getSaldo(){
+        return this.Saldo;
+    }
+
+    public boolean Sacar(double valor){
         if(this.Saldo >=valor){
             this.Saldo -= valor;
             return true;
         }
         return false;
     }
-    void depositar(double valor){
+
+    public void depositar(double valor){
    //     this.Saldo = this.Saldo + valor;
         this.Saldo += valor;
     }
-    boolean TransferirDinheiro(Conta destino, double valor){
+
+    public boolean TransferirDinheiro(Conta destino, double valor){
         if(this.Sacar(valor)){
             destino.depositar(valor);
             return true;

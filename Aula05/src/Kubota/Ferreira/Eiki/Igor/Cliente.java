@@ -1,9 +1,12 @@
 package Kubota.Ferreira.Eiki.Igor;
 
 public class Cliente {
-    String Titular;
-    String CPF;
+    private String Titular;
+    private String CPF;
 
+    public Cliente(String titular) {
+        this.Titular = titular;
+    }
 
     @Override
     public String toString() {
