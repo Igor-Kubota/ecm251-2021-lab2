@@ -1,7 +1,5 @@
 package Kubota.Ferreira.Eiki.Igor;
 
-import java.util.Locale;
-
 public class ValidadorCPF {
     private static String[] invalidosConhecidos = {
             "00000000000" , "11111111111" , "22222222222" ,
@@ -20,6 +18,8 @@ public class ValidadorCPF {
 
 
     private static final int TamanhoCPF = 11;
+
+
     public static boolean ValidarCPF(String cpf) {
         cpf = cpf.replace(".", "");
         cpf = cpf.replace("-", "");
@@ -44,7 +44,7 @@ public class ValidadorCPF {
 
 
 
-        return true;
+        return false;
     }
     private static boolean ValidarDigito(int[] multiplicadores , String cpf){
         int somatoria = 0;
