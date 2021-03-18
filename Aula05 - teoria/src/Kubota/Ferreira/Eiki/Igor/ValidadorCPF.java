@@ -38,12 +38,7 @@ public class ValidadorCPF {
         if(ValidarDigito(multiplicadoresPrimeiroDigitos,cpf) && ValidarDigito(MultiplicadoresSegundoDigito,cpf))
 
             return true;
-
-
-
-
-
-
+        
         return false;
     }
     private static boolean ValidarDigito(int[] multiplicadores , String cpf){
