@@ -13,11 +13,14 @@ public class Main {
 
 
         usuario1.CriarConta(1000.0);
+        usuario2.CriarConta(250.0);
+        usuario3.CriarConta(3000.0);
 
         System.out.println("Estado Inicial: ");
         System.out.println("Nome do Usuario 1: " + usuario1.getNome() + " Saldo: " + usuario1.getConta().getSaldo());
-
-
+        System.out.println("Nome do Usuario 2: " + usuario2.getNome() + " Saldo: " + usuario2.getConta().getSaldo());
+        System.out.println("Nome do Usuario 3: " + usuario3.getNome() + " Saldo: " + usuario3.getConta().getSaldo());
+        
 
 
     }
