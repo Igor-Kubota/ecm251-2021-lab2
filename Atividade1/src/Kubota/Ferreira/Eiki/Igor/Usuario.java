@@ -14,7 +14,6 @@ public class Usuario {
     private Conta conta;
 
 
-
     public Usuario(String nome, String senha, String email) {
         this.nome = nome;
         this.senha = senha;
@@ -40,9 +39,9 @@ public class Usuario {
 
     public void CriarConta(Double saldo){
         this.conta = new Conta(saldo);
-
-
     }
+
+
 
 
 

@@ -16,7 +16,7 @@ public class Transacoes {
         return r.nextInt((max - min) + 1) + min;
     }
 
-    private static String GerarQrcode(int idConta,String nome, double valor) {
+    public static String GerarQrcode(int idConta,String nome, double valor) {
         String Qrcode = (idConta + ";" + nome + ";" + valor + ";" + getRandomNumberInRange(1000,9000));
         return Qrcode;
 

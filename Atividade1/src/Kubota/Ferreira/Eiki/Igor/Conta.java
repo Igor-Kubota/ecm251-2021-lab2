@@ -9,12 +9,13 @@ public class Conta {
     private int idConta;
     private double saldo;
     private int nConta;
+    private String qrcode;
+
 
     //Construtor
     public Conta(double saldo) {
         nConta += 1;
         this.idConta = nConta;
-
         this.saldo = saldo;
     }
 
@@ -26,4 +27,26 @@ public class Conta {
     public double getSaldo() {
         return this.saldo;
     }
+
+    public String getQrcode() {
+        return this.qrcode;
+    }
+
+
+    //Metodos
+    public void CriarQrCode(String nome, double valor){
+        this.qrcode = Transacoes.GerarQrcode(this.idConta, nome, valor);
+    }
+
+    public void Pagar(Conta conta, double valor){
+        conta.saldo = conta.saldo - valor;
+    }
+    public void Receber(Conta conta, double valor){
+        conta.saldo = conta.saldo + valor;
+
+
+
+
+
 }
+
