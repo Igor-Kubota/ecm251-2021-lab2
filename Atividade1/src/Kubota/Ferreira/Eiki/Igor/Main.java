@@ -7,7 +7,6 @@
 
 package Kubota.Ferreira.Eiki.Igor;
 
-
 public class Main {
 
     public static void main(String[] args) {
@@ -33,7 +32,6 @@ public class Main {
         Transacoes.PagarRequisito(usuario2, usuario1, usuario1.getConta().getQrcode());
         Transacoes.PagarRequisito(usuario3, usuario1, usuario1.getConta().getQrcode());
         Transacoes.PagarRequisito(usuario2, usuario1, usuario1.getConta().getQrcode());
-
 
         usuario2.Requisitar(1000.0);
 
