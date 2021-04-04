@@ -47,5 +47,13 @@ public class Usuario {
         return QRCode;
     }
 
-
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "nome='" + nome + '\'' +
+                ", senha='" + senha + '\'' +
+                ", email='" + email + '\'' +
+                ", conta=" + conta +
+                '}';
+    }
 }

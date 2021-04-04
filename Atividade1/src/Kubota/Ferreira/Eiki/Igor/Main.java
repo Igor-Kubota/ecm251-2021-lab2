@@ -19,7 +19,8 @@ public class Main {
         System.out.println("Estado Inicial: ");
         System.out.println("Nome do Usuario 1: " + usuario1.getNome() + " Saldo: " + usuario1.getConta().getSaldo());
         System.out.println("Nome do Usuario 2: " + usuario2.getNome() + " Saldo: " + usuario2.getConta().getSaldo());
-        System.out.println("Nome do Usuario 3: " + usuario3.getNome() + " Saldo: " + usuario3.getConta().getSaldo());
+        System.out.println("Nome do Usuario 3: " + usuario3.getNome() + " Saldo: " + usuario3.getConta().getSaldo()+"\n");
+
 
         String P1 = usuario1.Requisitar(250.0);
 
@@ -32,6 +33,8 @@ public class Main {
 
         Transacoes.PagarRequisito(usuario3, usuario2, P2);
 
+
+        System.out.println("\nEstado Final: ");
         System.out.println("Nome do Usuario 1: " + usuario1.getNome() + " Saldo: " + usuario1.getConta().getSaldo());
         System.out.println("Nome do Usuario 2: " + usuario2.getNome() + " Saldo: " + usuario2.getConta().getSaldo());
         System.out.println("Nome do Usuario 3: " + usuario3.getNome() + " Saldo: " + usuario3.getConta().getSaldo());

@@ -32,7 +32,6 @@ public class Conta {
         return this.qrcode;
     }
 
-
     //Metodos
     public void CriarQrCode(String nome, double valor){
         this.qrcode = Transacoes.GerarQrcode(this.idConta, nome, valor);
@@ -41,9 +40,19 @@ public class Conta {
     public void Pagar(double valor){
         this.saldo = this.saldo - valor;
     }
+
     public void Receber(double valor){
         this.saldo = this.saldo + valor;
+    }
 
+    @Override
+    public String toString() {
+        return "Conta{" +
+                "idConta=" + idConta +
+                ", saldo=" + saldo +
+                ", nConta=" + nConta +
+                ", qrcode='" + qrcode + '\'' +
+                '}';
     }
 }
 
