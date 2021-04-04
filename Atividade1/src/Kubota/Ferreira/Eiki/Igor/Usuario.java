@@ -41,9 +41,11 @@ public class Usuario {
         this.conta = new Conta(saldo);
     }
 
-
-
-
+    public String Requisitar(double valor){
+        this.conta.CriarQrCode(this.nome , valor);
+        String QRCode = Transacoes.GerarQrcode(conta.getIdConta(), this.nome, valor);
+        return QRCode;
+    }
 
 
 }

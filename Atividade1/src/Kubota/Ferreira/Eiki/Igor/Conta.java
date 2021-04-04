@@ -38,15 +38,12 @@ public class Conta {
         this.qrcode = Transacoes.GerarQrcode(this.idConta, nome, valor);
     }
 
-    public void Pagar(Conta conta, double valor){
-        conta.saldo = conta.saldo - valor;
+    public void Pagar(double valor){
+        this.saldo = this.saldo - valor;
     }
-    public void Receber(Conta conta, double valor){
-        conta.saldo = conta.saldo + valor;
+    public void Receber(double valor){
+        this.saldo = this.saldo + valor;
 
-
-
-
-
+    }
 }
 

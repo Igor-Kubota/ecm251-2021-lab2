@@ -21,7 +21,21 @@ public class Main {
         System.out.println("Nome do Usuario 2: " + usuario2.getNome() + " Saldo: " + usuario2.getConta().getSaldo());
         System.out.println("Nome do Usuario 3: " + usuario3.getNome() + " Saldo: " + usuario3.getConta().getSaldo());
 
+        String P1 = usuario1.Requisitar(250.0);
 
+        Transacoes.PagarRequisito(usuario2, usuario1,P1);
+        Transacoes.PagarRequisito(usuario3, usuario1,P1);
+        Transacoes.PagarRequisito(usuario2, usuario1,P1);
+
+
+        String P2 = usuario2.Requisitar(1000.0);
+
+        Transacoes.PagarRequisito(usuario3, usuario2, P2);
+
+        System.out.println("Nome do Usuario 1: " + usuario1.getNome() + " Saldo: " + usuario1.getConta().getSaldo());
+        System.out.println("Nome do Usuario 2: " + usuario2.getNome() + " Saldo: " + usuario2.getConta().getSaldo());
+        System.out.println("Nome do Usuario 3: " + usuario3.getNome() + " Saldo: " + usuario3.getConta().getSaldo());
 
     }
+
 }
