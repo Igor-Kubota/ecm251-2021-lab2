@@ -1,7 +1,7 @@
 package Kubota.Ferreira.Eiki.Igor;
 
 public class Pedra  extends Jogada{
-    
+
     @Override
     public boolean verificaSeGanhei(Jogada jogada) {
         return jogada instanceof Tesoura;
@@ -11,4 +11,11 @@ public class Pedra  extends Jogada{
     public boolean verificaSePerdi(Jogada jogada) {
         return jogada instanceof Papel;
     }
+
+    @Override
+    public String toString() {
+        return "Pedra";
+    }
 }
+
+

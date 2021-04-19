@@ -12,4 +12,8 @@ public class Papel extends Jogada{
         return jogada instanceof Tesoura;
     }
 
+    @Override
+    public String toString() {
+        return "Papel";
+    }
 }

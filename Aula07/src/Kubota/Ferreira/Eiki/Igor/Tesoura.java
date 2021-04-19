@@ -11,4 +11,9 @@ public class Tesoura extends Jogada{
     public boolean verificaSePerdi(Jogada jogada) {
         return jogada instanceof Pedra;
     }
+
+    @Override
+    public String toString() {
+        return "Tesoura";
+    }
 }
