@@ -4,6 +4,7 @@ import br.maua.models.Conta;
 import br.maua.models.Pessoa;
 
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class LinkedListTestDrive {
@@ -27,6 +28,14 @@ public class LinkedListTestDrive {
         System.out.println("Passa pela lista de Contas: ");
         contas.forEach(conta -> System.out.println(conta));
 
+
+        System.out.println("----------------------------");
+        System.out.println("Passando pelos elementos com o Iterador: ");
+        Iterator<Conta> iterator = contas.iterator();
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+
+        }
 
 
     }
