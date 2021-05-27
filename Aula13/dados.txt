@@ -1,0 +1,6 @@
+pocao, 200
+funko, 300
+baralho, 400
+manga, 15
+baralho, 10
+booster, 8
