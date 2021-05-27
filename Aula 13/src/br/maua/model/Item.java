@@ -28,4 +28,14 @@ public class Item {
                 ", preco=" + preco +
                 '}';
     }
+
+    /**
+     * Método que cria um objeto Item dada uma string de entrada
+     * @param dados String com os valores do nome e do preço do item
+     * @return Uma instância de item
+     */
+    public static Item pegaItem(String dados){
+        return new Item(dados.split(",")[0],
+                Double.parseDouble(dados.split(",")[1]));
+    }
 }
