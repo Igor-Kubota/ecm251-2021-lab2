@@ -11,19 +11,7 @@ public class Cadastro {
 
     final private static Scanner scanner = new Scanner(System.in);
 
-    public static void Cadastrar(){
-        String func, nome, email;
-        Scanner input = new Scanner(System.in);
-
-        System.out.println("Função do usuário:");
-        func = input.nextLine();
-
-        System.out.println("Nome do usuário:");
-        nome = input.nextLine();
-
-        System.out.println("Email do usuário:");
-        email = input.nextLine();
-
+    public static void Cadastrar(String func, String nome, String email){
         File fw = null;
         try {
             fw = new File("Dados.txt");
@@ -83,7 +71,6 @@ public class Cadastro {
 
     public static Membro Listar(){
 
-
         System.out.println("Nome do usuário:");
         String nome = scanner.next();
 
@@ -92,7 +79,7 @@ public class Cadastro {
 
         System.out.println("Opções de Membros Disponiveis:");
         System.out.println(
-                        "1 - Big Brother.\n"+
+                "1 - Big Brother.\n"+
                         "2 - Heavy Lifter.\n" +
                         "3 - Script Guy.\n" +
                         "4 - Mobile Member.\n" +
@@ -102,20 +89,19 @@ public class Cadastro {
         int input = scanner.nextInt();
         switch (input){
             case 1:
-                Membro BigBrother = new BigBrothers(nome, email, TiposMembros.BigBrothers);
-                return BigBrother;
+                Cadastrar("Big Brothers",nome,email);
+                return new BigBrothers(nome, email, TiposMembros.BigBrothers);
 
             case 2:
-                Membro HeavyLifter = new HeavyLifters(nome,email,TiposMembros.HeavyLifters);
-                return HeavyLifter;
-
+                Cadastrar("Heavy Lifters",nome,email);
+                return new HeavyLifters(nome,email, TiposMembros.HeavyLifters);
             case 3:
-                Membro ScriptGuys = new ScriptGuys(nome,email,TiposMembros.ScriptGuys);
-                return ScriptGuys;
+                Cadastrar("Script Guys",nome,email);
+                return new ScriptGuys(nome,email, TiposMembros.ScriptGuys);
 
             case 4:
-                Membro MobileMember = new MobileMembers(nome,email,TiposMembros.MobileMembers);
-                return MobileMember;
+                Cadastrar("Mobile Members",nome,email);
+                return new MobileMembers(nome,email, TiposMembros.MobileMembers);
 
             case 5:
                 System.out.println("Voltando ao Menu Principal...");
@@ -124,9 +110,6 @@ public class Cadastro {
             default:
                 System.out.println("Opção Invalida.");
                 return null;
-
-
         }
-
     }
 }
