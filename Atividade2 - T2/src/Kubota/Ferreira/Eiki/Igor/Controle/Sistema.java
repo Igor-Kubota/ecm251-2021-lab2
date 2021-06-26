@@ -1,6 +1,7 @@
 package Kubota.Ferreira.Eiki.Igor.Controle;
 
-import Kubota.Ferreira.Eiki.Igor.Enums.Horarios;
+import Kubota.Ferreira.Eiki.Igor.Enums.*;
+import Kubota.Ferreira.Eiki.Igor.Models.*;
 
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
@@ -11,6 +12,8 @@ public class Sistema{
 
     public static void run()throws InterruptedException  {
         boolean running = true;
+
+        //Membro membro0 = new HeavyLifters("a","b",TiposMembros.HeavyLifters);
 
 
         while(running){
@@ -37,8 +40,8 @@ public class Sistema{
                 break;
 
             case 2:
-                System.out.println("b");
-                TimeUnit.SECONDS.sleep(1);
+                //membro0.Mensagem(HoraAtual);
+                TimeUnit.SECONDS.sleep(5);
                 break;
 
             case 3:
