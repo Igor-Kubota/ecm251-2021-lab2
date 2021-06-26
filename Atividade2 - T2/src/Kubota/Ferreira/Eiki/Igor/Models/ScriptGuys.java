@@ -29,6 +29,7 @@ public class ScriptGuys extends Membro{
                 System.out.println(getFuncao()+" de nome "+getNome() + ": ");
                 System.out.println("Prazer em ajudar novos amigos de código!\n");
                 break;
+                
             case EXTRA:
                 System.out.println(getFuncao()+" de nome "+getNome() + ": ");
                 System.out.println("QU3Ro_S3us_r3curs0s.py\n");

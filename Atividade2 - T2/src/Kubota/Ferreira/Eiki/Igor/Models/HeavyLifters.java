@@ -29,6 +29,7 @@ public class HeavyLifters extends Membro{
                 System.out.println(getFuncao()+" de nome "+getNome() + ": ");
                 System.out.println("Podem contar conosco!\n");
                 break;
+
             case EXTRA:
                 System.out.println(getFuncao()+" de nome "+getNome() + ": ");
                 System.out.println("N00b_qu3_n_Se_r3pita.bat\n");

@@ -29,6 +29,7 @@ public class BigBrothers extends Membro{
                 System.out.println(getFuncao()+" de nome "+getNome() + ": ");
                 System.out.println("Sempre ajudando as pessoas membros ou não S2!\n");
                 break;
+
             case EXTRA:
                 System.out.println(getFuncao()+" de nome "+getNome() + ": ");
                 System.out.println("...\n");

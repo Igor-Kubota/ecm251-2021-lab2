@@ -33,6 +33,7 @@ public class MobileMembers extends Membro{
                 System.out.println(getFuncao()+" de nome "+getNome() + ": ");
                 System.out.println("Happy Coding!\n");
                 break;
+
             case EXTRA:
                 System.out.println(getFuncao()+" de nome "+getNome() + ": ");
                 System.out.println("Happy_C0d1ng. Maskers.\n");

@@ -51,7 +51,7 @@ public class Sistema{
                 System.in.read();
                 break;
 
-                
+
             case 2:
                 lista.getListaDeMembros();
 
