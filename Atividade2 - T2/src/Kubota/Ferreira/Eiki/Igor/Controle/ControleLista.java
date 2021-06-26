@@ -9,6 +9,7 @@ public class ControleLista {
 
     //getter
     public ArrayList<Membro> getListaDeMembros() {
+        System.out.println(ListaDeMembros);
         return ListaDeMembros;
     }
 
@@ -17,8 +18,7 @@ public class ControleLista {
     }
 
     public void RemoverMembro(Membro membro){
-        this.ListaDeMembros.remove(membro)
-
+        this.ListaDeMembros.remove(membro);
 
     }
 }

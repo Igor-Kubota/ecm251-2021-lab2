@@ -3,6 +3,8 @@ package Kubota.Ferreira.Eiki.Igor.Models;
 import Kubota.Ferreira.Eiki.Igor.Enums.Horarios;
 import Kubota.Ferreira.Eiki.Igor.Enums.TiposMembros;
 
+import java.sql.SQLOutput;
+
 public class MobileMembers extends Membro{
 
     public MobileMembers(String nome, String email, TiposMembros funcao){
@@ -13,6 +15,12 @@ public class MobileMembers extends Membro{
 
     @Override
     public void ExibirRelatorio() {
+        System.out.println(
+                "Eu sou o "         +getNome()+
+                " de email "        +getEmail()+
+                " com a Função de " +getFuncao()
+        );
+
 
     }
 
@@ -22,9 +30,11 @@ public class MobileMembers extends Membro{
             default:
                 break;
             case REGULAR:
-                System.out.println("Happy Coding!");
+                System.out.println(getFuncao()+" de nome "+getNome() + ": ");
+                System.out.println("Happy Coding!\n");
                 break;
             case EXTRA:
+                System.out.println(getFuncao()+":");
                 System.out.println("Happy_C0d1ng. Maskers.");
                 break;
         }

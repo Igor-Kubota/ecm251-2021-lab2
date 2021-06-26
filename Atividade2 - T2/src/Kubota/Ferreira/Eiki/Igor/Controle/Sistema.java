@@ -3,12 +3,16 @@ package Kubota.Ferreira.Eiki.Igor.Controle;
 import Kubota.Ferreira.Eiki.Igor.Enums.*;
 import Kubota.Ferreira.Eiki.Igor.Models.*;
 
+import java.awt.image.renderable.ContextualRenderedImageFactory;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class Sistema{
     final private static Scanner scanner = new Scanner(System.in);
+
+    final private static ControleLista lista = new ControleLista();
     private static Horarios HoraAtual = Horarios.REGULAR;
+
 
     public static void run()throws InterruptedException  {
         boolean running = true;
@@ -36,21 +40,28 @@ public class Sistema{
         switch (input){
             case 1 :
                 Cadastro cadastro = new Cadastro();
-                cadastro.Cadastrar();
+                //cadastro.Cadastrar();
+
+                Membro membro = cadastro.Listar();
+                lista.AddMembro(membro);
                 TimeUnit.SECONDS.sleep(1);
                 break;
 
             case 2:
-                //membro0.Mensagem(HoraAtual);
+                lista.getListaDeMembros();
                 TimeUnit.SECONDS.sleep(5);
                 break;
 
             case 3:
-                System.out.println("c");
+                //System.out.println("c");
+                for(Membro membros : lista.getListaDeMembros())
+                    membros.Mensagem(HoraAtual);
+
                 TimeUnit.SECONDS.sleep(1);
                 break;
             case 4:
-                System.out.println("e");
+                for(Membro membros : lista.getListaDeMembros())
+                    membros.ExibirRelatorio();
                 TimeUnit.SECONDS.sleep(1);
                 break;
 

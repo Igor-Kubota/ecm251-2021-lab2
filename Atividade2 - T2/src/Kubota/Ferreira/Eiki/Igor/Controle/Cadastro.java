@@ -1,10 +1,15 @@
 package Kubota.Ferreira.Eiki.Igor.Controle;
 
+import Kubota.Ferreira.Eiki.Igor.Enums.TiposMembros;
+import Kubota.Ferreira.Eiki.Igor.Models.*;
+
 import java.io.*;
 import java.util.*;
 ;
 
 public class Cadastro {
+
+    final private static Scanner scanner = new Scanner(System.in);
 
     public static void Cadastrar(){
         String func, nome, email;
@@ -76,4 +81,48 @@ public class Cadastro {
         }
     }
 
+    public static Membro Listar(){
+
+
+        System.out.println("Nome do usuário:");
+        String nome = scanner.next();
+
+        System.out.println("Email do usuário:");
+        String email = scanner.next();
+
+        System.out.println("Opções de Membros Disponiveis:");
+        System.out.println(
+                        "1 - Big Brother.\n"+
+                        "2 - Heavy Lifter.\n" +
+                        "3 - Script Guy.\n" +
+                        "4 - Mobile Member.\n" +
+                        "5 - Cancelar.\n"+
+                        "Digite a sua Opção: "
+        );
+        int input = scanner.nextInt();
+        switch (input){
+            case 1:
+                return new BigBrothers(nome, email, TiposMembros.BigBrothers);
+
+            case 2:
+                return new HeavyLifters(nome,email,TiposMembros.HeavyLifters);
+
+            case 3:
+                return new ScriptGuys(nome,email,TiposMembros.ScriptGuys);
+
+            case 4:
+                return new MobileMembers(nome,email,TiposMembros.MobileMembers);
+
+            case 5:
+                System.out.println("Voltando ao Menu Principal...");
+                return null;
+
+            default:
+                System.out.println("Opção Invalida.");
+                return null;
+
+
+        }
+
+    }
 }
