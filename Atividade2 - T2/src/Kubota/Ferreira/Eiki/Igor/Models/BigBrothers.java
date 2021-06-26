@@ -16,7 +16,7 @@ public class BigBrothers extends Membro{
         System.out.println(
                 "nome: "    +getNome()+"\n"+
                 "email: "   +getEmail()+"\n"+
-                "Função: "  +getFuncao()+ "\n\n"
+                "Função: "  +getFuncao()+ "\n"
         );
     }
 

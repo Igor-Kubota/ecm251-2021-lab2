@@ -14,9 +14,9 @@ public class HeavyLifters extends Membro{
     @Override
     public void ExibirRelatorio() {
         System.out.println(
-                "Eu sou o "         +getNome()+
-                " de email "        +getEmail()+
-                " com a Função de " +getFuncao()
+                "nome: "    +getNome()+"\n"+
+                "email: "   +getEmail()+"\n"+
+                "Função: "  +getFuncao()+ "\n"
         );
 
     }
