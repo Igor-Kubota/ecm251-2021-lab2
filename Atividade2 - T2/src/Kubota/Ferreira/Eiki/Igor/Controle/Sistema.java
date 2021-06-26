@@ -35,7 +35,8 @@ public class Sistema{
         int input = scanner.nextInt();
         switch (input){
             case 1 :
-                System.out.println("bom dia\n");
+                Cadastro cadastro = new Cadastro();
+                cadastro.Cadastrar();
                 TimeUnit.SECONDS.sleep(1);
                 break;
 

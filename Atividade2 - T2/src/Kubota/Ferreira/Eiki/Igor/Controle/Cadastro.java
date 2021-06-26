@@ -75,4 +75,5 @@ public class Cadastro {
             System.out.println("Algo deu errado:");
         }
     }
+
 }
