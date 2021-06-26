@@ -12,13 +12,9 @@ public class BigBrothers extends Membro{
 
     @Override
     public void ExibirRelatorio() {
-
     }
 
     @Override
     public void Mensagem() {
-
     }
-}
-
 }

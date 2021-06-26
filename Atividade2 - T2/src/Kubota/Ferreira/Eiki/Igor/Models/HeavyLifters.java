@@ -3,7 +3,7 @@ package Kubota.Ferreira.Eiki.Igor.Models;
 import Kubota.Ferreira.Eiki.Igor.Enums.TiposMembros;
 
 public class HeavyLifters extends Membro{
-    
+
     public HeavyLifters(String nome, String email, TiposMembros funcao){
         super(nome, email, funcao);
 
@@ -19,6 +19,4 @@ public class HeavyLifters extends Membro{
     public void Mensagem() {
 
     }
-}
-
 }
