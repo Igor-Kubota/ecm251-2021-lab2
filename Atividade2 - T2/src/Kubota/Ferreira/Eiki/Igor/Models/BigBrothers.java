@@ -1,5 +1,6 @@
 package Kubota.Ferreira.Eiki.Igor.Models;
 
+import Kubota.Ferreira.Eiki.Igor.Enums.Horarios;
 import Kubota.Ferreira.Eiki.Igor.Enums.TiposMembros;
 
 public class BigBrothers extends Membro{
@@ -15,6 +16,16 @@ public class BigBrothers extends Membro{
     }
 
     @Override
-    public void Mensagem() {
+    public void Mensagem(Horarios horario) {
+        switch (horario) {
+            default:
+                break;
+            case REGULAR:
+                System.out.println("Sempre ajudando as pessoas membros ou não S2!");
+                break;
+            case EXTRA:
+                System.out.println("...");
+                break;
+        }
     }
 }

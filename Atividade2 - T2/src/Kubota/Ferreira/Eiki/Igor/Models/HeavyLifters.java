@@ -1,5 +1,6 @@
 package Kubota.Ferreira.Eiki.Igor.Models;
 
+import Kubota.Ferreira.Eiki.Igor.Enums.Horarios;
 import Kubota.Ferreira.Eiki.Igor.Enums.TiposMembros;
 
 public class HeavyLifters extends Membro{
@@ -15,8 +16,18 @@ public class HeavyLifters extends Membro{
 
     }
 
-    @Override
-    public void Mensagem() {
+    public void Mensagem(Horarios horario) {
+        switch (horario) {
+            default:
+                break;
+            case REGULAR:
+                System.out.println("Podem contar conosco!");
+                break;
+            case EXTRA:
+                System.out.println("N00b_qu3_n_Se_r3pita.bat");
+                break;
+        }
+
 
     }
 }
