@@ -12,7 +12,11 @@ public class ScriptGuys extends Membro{
 
 
     @Override
-    public void ExibirRelatorio() {
+    public void ExibirRelatorio() {System.out.println(
+            "Eu sou o "         +getNome()+
+            " de email "        +getEmail()+
+            " com a Função de " +getFuncao()+"\n"
+    );
 
     }
 
@@ -22,10 +26,12 @@ public class ScriptGuys extends Membro{
             default:
                 break;
             case REGULAR:
-                System.out.println("Prazer em ajudar novos amigos de código!");
+                System.out.println(getFuncao()+" de nome "+getNome() + ": ");
+                System.out.println("Prazer em ajudar novos amigos de código!\n");
                 break;
             case EXTRA:
-                System.out.println("QU3Ro_S3us_r3curs0s.py");
+                System.out.println(getFuncao()+" de nome "+getNome() + ": ");
+                System.out.println("QU3Ro_S3us_r3curs0s.py\n");
                 break;
         }
 

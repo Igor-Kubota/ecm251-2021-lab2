@@ -13,6 +13,11 @@ public class HeavyLifters extends Membro{
 
     @Override
     public void ExibirRelatorio() {
+        System.out.println(
+                "Eu sou o "         +getNome()+
+                " de email "        +getEmail()+
+                " com a Função de " +getFuncao()
+        );
 
     }
 
@@ -21,10 +26,12 @@ public class HeavyLifters extends Membro{
             default:
                 break;
             case REGULAR:
-                System.out.println("Podem contar conosco!");
+                System.out.println(getFuncao()+" de nome "+getNome() + ": ");
+                System.out.println("Podem contar conosco!\n");
                 break;
             case EXTRA:
-                System.out.println("N00b_qu3_n_Se_r3pita.bat");
+                System.out.println(getFuncao()+" de nome "+getNome() + ": ");
+                System.out.println("N00b_qu3_n_Se_r3pita.bat\n");
                 break;
         }
 

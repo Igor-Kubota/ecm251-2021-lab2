@@ -13,6 +13,11 @@ public class BigBrothers extends Membro{
 
     @Override
     public void ExibirRelatorio() {
+        System.out.println(
+                "Eu sou o "         +getNome()+
+                " de email "        +getEmail()+
+                " com a Função de " +getFuncao()
+        );
     }
 
     @Override
@@ -21,10 +26,12 @@ public class BigBrothers extends Membro{
             default:
                 break;
             case REGULAR:
-                System.out.println("Sempre ajudando as pessoas membros ou não S2!");
+                System.out.println(getFuncao()+" de nome "+getNome() + ": ");
+                System.out.println("Sempre ajudando as pessoas membros ou não S2!\n");
                 break;
             case EXTRA:
-                System.out.println("...");
+                System.out.println(getFuncao()+" de nome "+getNome() + ": ");
+                System.out.println("...\n");
                 break;
         }
     }

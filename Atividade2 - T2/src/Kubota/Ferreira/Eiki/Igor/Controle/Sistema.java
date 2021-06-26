@@ -4,6 +4,7 @@ import Kubota.Ferreira.Eiki.Igor.Enums.*;
 import Kubota.Ferreira.Eiki.Igor.Models.*;
 
 import java.awt.image.renderable.ContextualRenderedImageFactory;
+import java.io.IOException;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
@@ -14,7 +15,7 @@ public class Sistema{
     private static Horarios HoraAtual = Horarios.REGULAR;
 
 
-    public static void run()throws InterruptedException  {
+    public static void run() throws InterruptedException, IOException {
         boolean running = true;
 
         //Membro membro0 = new HeavyLifters("a","b",TiposMembros.HeavyLifters);
@@ -44,30 +45,42 @@ public class Sistema{
 
                 Membro membro = cadastro.Listar();
                 lista.AddMembro(membro);
-                TimeUnit.SECONDS.sleep(1);
+                System.out.println("Membro Adicionado!");
+
+                System.out.println("Press Enter to Continue...");
+                System.in.read();
                 break;
 
+                
             case 2:
                 lista.getListaDeMembros();
-                TimeUnit.SECONDS.sleep(5);
+
+                System.out.println("Press Enter to Continue...");
+                System.in.read();
                 break;
 
+
             case 3:
-                //System.out.println("c");
                 for(Membro membros : lista.getListaDeMembros())
                     membros.Mensagem(HoraAtual);
 
-                TimeUnit.SECONDS.sleep(1);
+                System.out.println("Press Enter to Continue...");
+                System.in.read();
                 break;
+
             case 4:
                 for(Membro membros : lista.getListaDeMembros())
                     membros.ExibirRelatorio();
-                TimeUnit.SECONDS.sleep(1);
+
+                System.out.println("Press Enter to Continue...");
+                System.in.read();
                 break;
 
             case 5:
                 System.out.println("Estamos em Horário: " + HoraAtual + ".\n");
-                TimeUnit.SECONDS.sleep(1);
+
+                System.out.println("Press Enter to Continue...");
+                System.in.read();
                 break;
 
             case 6:
@@ -77,7 +90,10 @@ public class Sistema{
                     HoraAtual = Horarios.REGULAR;
                 }
                 System.out.println("Troca De Horário Realizada com Sucesso.\n");
-                TimeUnit.SECONDS.sleep(1);
+                System.out.println("Agora Estamos em Horario:"+HoraAtual);
+
+                System.out.println("Press Enter to Continue...");
+                System.in.read();
                 break;
 
             case 7:
