@@ -40,7 +40,6 @@ public class Sistema{
         switch (input){
             case 1 :
                 Cadastro cadastro = new Cadastro();
-                //cadastro.Cadastrar();
 
                 Membro membro = cadastro.Listar();
                 if (membro != null) {
@@ -54,9 +53,6 @@ public class Sistema{
 
 
             case 2:
-                //for(Membro membros : lista.getListaDeMembros())
-                //    membros.Mensagem(HoraAtual);
-
                 for(int i = 0;i<lista.getListaDeMembros().size();i++) {
                     System.out.println("MEMBRO " + i + " :");
                     lista.getListaDeMembros().get(i).Mensagem(HoraAtual);
@@ -67,8 +63,6 @@ public class Sistema{
 
 
             case 3:
-                //for(Membro membros : lista.getListaDeMembros())
-                //    membros.ExibirRelatorio();
                 for(int i = 0;i<lista.getListaDeMembros().size();i++){
                     System.out.println("MEMBRO "+ i + " :");
                     lista.getListaDeMembros().get(i).ExibirRelatorio();
@@ -89,10 +83,11 @@ public class Sistema{
                 if(remove<lista.getListaDeMembros().size()) {
                     lista.RemoverMembro(lista.getListaDeMembros().get(remove));
                     System.out.println("Membro "+ remove +"Removido Com Sucesso!");
-                    
                 }else{
                     System.out.println("Opção Invalida.");
                 }
+
+
 
                 System.out.println("Press Enter to Continue...");
                 System.in.read();
