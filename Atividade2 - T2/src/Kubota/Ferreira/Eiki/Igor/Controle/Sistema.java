@@ -5,6 +5,7 @@ import Kubota.Ferreira.Eiki.Igor.Models.*;
 
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Sistema{
     final private static Scanner scanner = new Scanner(System.in);
@@ -42,34 +43,56 @@ public class Sistema{
                 //cadastro.Cadastrar();
 
                 Membro membro = cadastro.Listar();
-                lista.AddMembro(membro);
-                System.out.println("Membro Adicionado!");
-                lista.getListaDeMembros();
-
+                if (membro != null) {
+                    lista.AddMembro(membro);
+                    System.out.println("Membro Adicionado!");
+                    lista.getListaDeMembros();
+                }
                 System.out.println("Press Enter to Continue...");
                 System.in.read();
                 break;
 
 
             case 2:
-                for(Membro membros : lista.getListaDeMembros())
-                    membros.Mensagem(HoraAtual);
+                //for(Membro membros : lista.getListaDeMembros())
+                //    membros.Mensagem(HoraAtual);
 
+                for(int i = 0;i<lista.getListaDeMembros().size();i++) {
+                    System.out.println("MEMBRO " + i + " :");
+                    lista.getListaDeMembros().get(i).Mensagem(HoraAtual);
+                }
                 System.out.println("Press Enter to Continue...");
                 System.in.read();
                 break;
 
 
             case 3:
-                for(Membro membros : lista.getListaDeMembros())
-                    membros.ExibirRelatorio();
+                //for(Membro membros : lista.getListaDeMembros())
+                //    membros.ExibirRelatorio();
+                for(int i = 0;i<lista.getListaDeMembros().size();i++){
+                    System.out.println("MEMBRO "+ i + " :");
+                    lista.getListaDeMembros().get(i).ExibirRelatorio();
+                }
 
                 System.out.println("\nPress Enter to Continue...");
                 System.in.read();
                 break;
 
             case 4:
-                System.out.println("FAZER");
+                for(int i = 0;i<lista.getListaDeMembros().size();i++){
+                    System.out.println("MEMBRO "+ i + " :");
+                    lista.getListaDeMembros().get(i).ExibirRelatorio();
+                }
+                System.out.println("Escolha um Membro para Remover: ");
+
+                int remove = scanner.nextInt();
+                if(remove<lista.getListaDeMembros().size()) {
+                    lista.RemoverMembro(lista.getListaDeMembros().get(remove));
+                    System.out.println("Membro "+ remove +"Removido Com Sucesso!");
+                    
+                }else{
+                    System.out.println("Opção Invalida.");
+                }
 
                 System.out.println("Press Enter to Continue...");
                 System.in.read();

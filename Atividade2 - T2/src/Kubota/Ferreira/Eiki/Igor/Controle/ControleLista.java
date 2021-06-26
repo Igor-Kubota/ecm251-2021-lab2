@@ -9,7 +9,6 @@ public class ControleLista {
 
     //getter
     public ArrayList<Membro> getListaDeMembros() {
-        System.out.println(ListaDeMembros);
         return ListaDeMembros;
     }
 
