@@ -102,16 +102,20 @@ public class Cadastro {
         int input = scanner.nextInt();
         switch (input){
             case 1:
-                return new BigBrothers(nome, email, TiposMembros.BigBrothers);
+                Membro BigBrother = new BigBrothers(nome, email, TiposMembros.BigBrothers);
+                return BigBrother;
 
             case 2:
-                return new HeavyLifters(nome,email,TiposMembros.HeavyLifters);
+                Membro HeavyLifter = new HeavyLifters(nome,email,TiposMembros.HeavyLifters);
+                return HeavyLifter;
 
             case 3:
-                return new ScriptGuys(nome,email,TiposMembros.ScriptGuys);
+                Membro ScriptGuys = new ScriptGuys(nome,email,TiposMembros.ScriptGuys);
+                return ScriptGuys;
 
             case 4:
-                return new MobileMembers(nome,email,TiposMembros.MobileMembers);
+                Membro MobileMember = new MobileMembers(nome,email,TiposMembros.MobileMembers);
+                return MobileMember;
 
             case 5:
                 System.out.println("Voltando ao Menu Principal...");

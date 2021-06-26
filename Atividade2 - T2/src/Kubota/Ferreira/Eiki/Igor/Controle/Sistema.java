@@ -3,10 +3,8 @@ package Kubota.Ferreira.Eiki.Igor.Controle;
 import Kubota.Ferreira.Eiki.Igor.Enums.*;
 import Kubota.Ferreira.Eiki.Igor.Models.*;
 
-import java.awt.image.renderable.ContextualRenderedImageFactory;
 import java.io.IOException;
 import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
 
 public class Sistema{
     final private static Scanner scanner = new Scanner(System.in);
@@ -46,6 +44,7 @@ public class Sistema{
                 Membro membro = cadastro.Listar();
                 lista.AddMembro(membro);
                 System.out.println("Membro Adicionado!");
+                lista.getListaDeMembros();
 
                 System.out.println("Press Enter to Continue...");
                 System.in.read();
@@ -53,7 +52,8 @@ public class Sistema{
 
 
             case 2:
-                lista.getListaDeMembros();
+                for(Membro membros : lista.getListaDeMembros())
+                    membros.Mensagem(HoraAtual);
 
                 System.out.println("Press Enter to Continue...");
                 System.in.read();
@@ -62,15 +62,14 @@ public class Sistema{
 
             case 3:
                 for(Membro membros : lista.getListaDeMembros())
-                    membros.Mensagem(HoraAtual);
+                    membros.ExibirRelatorio();
 
-                System.out.println("Press Enter to Continue...");
+                System.out.println("\nPress Enter to Continue...");
                 System.in.read();
                 break;
 
             case 4:
-                for(Membro membros : lista.getListaDeMembros())
-                    membros.ExibirRelatorio();
+                System.out.println("FAZER");
 
                 System.out.println("Press Enter to Continue...");
                 System.in.read();
