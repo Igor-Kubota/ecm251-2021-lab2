@@ -74,6 +74,7 @@ public class Sistema{
                 break;
 
             default:
+                System.out.println("Opção Inválida!");
                 break;
 
             }
