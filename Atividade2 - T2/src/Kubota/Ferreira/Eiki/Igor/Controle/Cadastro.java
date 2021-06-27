@@ -5,12 +5,23 @@ import Kubota.Ferreira.Eiki.Igor.Models.*;
 
 import java.io.*;
 import java.util.*;
-;
+
 
 public class Cadastro {
 
+    /**
+     * Scanner
+     */
     final private static Scanner scanner = new Scanner(System.in);
 
+
+    /**
+     * Metodo responsável pelo cadastro de usuarios
+     * @param func função do usuario
+     * @param nome nome do usuario
+     * @param email email do usuario
+     * Utiliza um try e catch para tratamento de exceções
+     */
     public static void Cadastrar(String func, String nome, String email){
         File fw = null;
         try {
@@ -69,6 +80,10 @@ public class Cadastro {
         }
     }
 
+    /**
+     * Metodo que esta ligado a criação e seleção de membros
+     * @return retorna o resultado conforme a opção escolhida
+     */
     public static Membro Listar(){
 
         System.out.println("Nome do usuário:");
@@ -112,6 +127,4 @@ public class Cadastro {
                 return null;
         }
     }
-
-
 }
