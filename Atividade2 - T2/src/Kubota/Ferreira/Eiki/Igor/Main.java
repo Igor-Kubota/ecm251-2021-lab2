@@ -10,7 +10,7 @@ public class Main {
     /**
      * Método main do código
      * @param args argumentos do main
-     * @throws Exception
+     * @throws Exception Lança uma exceção
      */
 
     public static void main(String[] args)throws Exception {
