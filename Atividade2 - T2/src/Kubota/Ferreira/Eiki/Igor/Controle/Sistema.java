@@ -6,6 +6,10 @@ import Kubota.Ferreira.Eiki.Igor.Models.*;
 import java.io.IOException;
 import java.util.Scanner;
 
+
+/**
+ * Sistema do código
+ */
 public class Sistema{
     final private static Scanner scanner = new Scanner(System.in);
 
@@ -13,6 +17,11 @@ public class Sistema{
     private static Horarios HoraAtual = Horarios.REGULAR;
 
 
+    /**
+     * Metodo que comanda o funcionamento do sistema e trabalha com o tratamento de exceções
+     * @throws InterruptedException lança uma exceção do tipo InterruptedException
+     * @throws IOException lança uma exceção do tipo IO
+     */
     public static void run() throws InterruptedException, IOException {
         boolean running = true;
 
