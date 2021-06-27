@@ -3,16 +3,24 @@ package Kubota.Ferreira.Eiki.Igor.Models;
 import Kubota.Ferreira.Eiki.Igor.Enums.Horarios;
 import Kubota.Ferreira.Eiki.Igor.Enums.TiposMembros;
 
-import java.sql.SQLOutput;
-
 public class MobileMembers extends Membro{
 
+
+    /**
+     * Metodo/Classe que representa a função MobileMembers
+     * @param nome nome do integrante
+     * @param email email do integrante
+     * @param funcao funcao do integrante
+     */
     public MobileMembers(String nome, String email, TiposMembros funcao){
         super(nome, email, funcao);
 
     }
 
 
+    /**
+     * Organiza em uma "Tabela"
+     */
     @Override
     public void ExibirRelatorio() {
         System.out.println(
@@ -24,6 +32,11 @@ public class MobileMembers extends Membro{
 
     }
 
+
+    /**
+     * Metodo que retorna uma determinada mensagem conforme o horário selecionado
+     * @param horario horario do expediente, pode ser normal ou extra
+     */
     @Override
     public void Mensagem(Horarios horario) {
         switch (horario) {
