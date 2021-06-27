@@ -103,25 +103,33 @@ public class Cadastro {
         );
         int input = scanner.nextInt();
         switch (input){
+
+            //Se for um BigBrother
             case 1:
                 Cadastrar("Big Brothers",nome,email);
                 return new BigBrothers(nome, email, TiposMembros.BigBrothers);
 
+            //Se for um HeavyLifter
             case 2:
                 Cadastrar("Heavy Lifters",nome,email);
                 return new HeavyLifters(nome,email, TiposMembros.HeavyLifters);
+
+            //Se for um ScriptGuy
             case 3:
                 Cadastrar("Script Guys",nome,email);
                 return new ScriptGuys(nome,email, TiposMembros.ScriptGuys);
 
+            //Se for um MobileMember
             case 4:
                 Cadastrar("Mobile Members",nome,email);
                 return new MobileMembers(nome,email, TiposMembros.MobileMembers);
 
+            //Caso deseje voltar
             case 5:
                 System.out.println("Voltando ao Menu Principal...");
                 return null;
 
+            //Case Default
             default:
                 System.out.println("Opção Invalida.");
                 return null;

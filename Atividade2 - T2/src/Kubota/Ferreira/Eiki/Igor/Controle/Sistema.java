@@ -11,8 +11,8 @@ import java.util.Scanner;
  * Sistema do código
  */
 public class Sistema{
-    final private static Scanner scanner = new Scanner(System.in);
 
+    final private static Scanner scanner = new Scanner(System.in);
     final private static ControleLista lista = new ControleLista();
     private static Horarios HoraAtual = Horarios.REGULAR;
 
@@ -25,7 +25,7 @@ public class Sistema{
     public static void run() throws InterruptedException, IOException {
         boolean running = true;
 
-
+        //Limpa os files ao inicializar
         ControleLista.Limpa();
 
         while(running){
@@ -46,6 +46,7 @@ public class Sistema{
 
         int input = scanner.nextInt();
         switch (input){
+            //Cadastrar um novo Membro.
             case 1 :
                 Cadastro cadastro = new Cadastro();
 
@@ -59,7 +60,7 @@ public class Sistema{
                 System.in.read();
                 break;
 
-
+            //Postar mensagem
             case 2:
                 for(int i = 0;i<lista.getListaDeMembros().size();i++) {
                     System.out.println("MEMBRO " + i + " :");
@@ -69,7 +70,7 @@ public class Sistema{
                 System.in.read();
                 break;
 
-
+            //Exibir Relatório de Informações
             case 3:
                 for(int i = 0;i<lista.getListaDeMembros().size();i++){
                     System.out.println("MEMBRO "+ i + " :");
@@ -80,6 +81,7 @@ public class Sistema{
                 System.in.read();
                 break;
 
+            //Remover um Membro
             case 4:
                 for(int i = 0;i<lista.getListaDeMembros().size();i++){
                     System.out.println("MEMBRO "+ i + " :");
@@ -95,12 +97,11 @@ public class Sistema{
                     System.out.println("Opção Invalida.");
                 }
 
-
-
                 System.out.println("Press Enter to Continue...");
                 System.in.read();
                 break;
 
+            //Verificar Horário
             case 5:
                 System.out.println("Estamos em Horário: " + HoraAtual + ".\n");
 
@@ -108,6 +109,7 @@ public class Sistema{
                 System.in.read();
                 break;
 
+            //Trocar o horário de trabalho
             case 6:
                 if(HoraAtual == Horarios.REGULAR) {
                     HoraAtual = Horarios.EXTRA;
@@ -121,11 +123,13 @@ public class Sistema{
                 System.in.read();
                 break;
 
+            //Encerrar o Sistema
             case 7:
                 System.out.println("Encerrando Sistema...");
                 running = false;
                 break;
 
+            //Caso Default
             default:
                 System.out.println("Opção Inválida!");
                 break;
