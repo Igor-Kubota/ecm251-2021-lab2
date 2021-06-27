@@ -7,6 +7,11 @@ package Kubota.Ferreira.Eiki.Igor;
 import Kubota.Ferreira.Eiki.Igor.Controle.Sistema;
 
 public class Main {
+    /**
+     * Método main do código
+     * @param args argumentos do main
+     * @throws Exception
+     */
 
     public static void main(String[] args)throws Exception {
         Sistema sistema = new Sistema();
