@@ -79,7 +79,7 @@ public class Cadastro {
 
         System.out.println("Opções de Membros Disponiveis:");
         System.out.println(
-                "1 - Big Brother.\n"+
+                        "1 - Big Brother.\n"+
                         "2 - Heavy Lifter.\n" +
                         "3 - Script Guy.\n" +
                         "4 - Mobile Member.\n" +
@@ -112,4 +112,6 @@ public class Cadastro {
                 return null;
         }
     }
+
+
 }

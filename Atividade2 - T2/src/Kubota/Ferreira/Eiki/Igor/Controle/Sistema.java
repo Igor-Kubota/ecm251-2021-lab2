@@ -5,7 +5,6 @@ import Kubota.Ferreira.Eiki.Igor.Models.*;
 
 import java.io.IOException;
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class Sistema{
     final private static Scanner scanner = new Scanner(System.in);
@@ -17,8 +16,8 @@ public class Sistema{
     public static void run() throws InterruptedException, IOException {
         boolean running = true;
 
-        //Membro membro0 = new HeavyLifters("a","b",TiposMembros.HeavyLifters);
 
+        ControleLista.Limpa();
 
         while(running){
         System.out.println("******* Bem Vindo ao Mask_Society *******\n");
