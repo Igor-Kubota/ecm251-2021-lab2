@@ -6,10 +6,10 @@ public class Dados {
     final public String email;
 
     /**
-     * Construtor do elemento item
-     * @param funcao
-     * @param nome
-     * @param email
+     * Construtor do elemento Dados
+     * @param funcao funcao a ser cadastrada
+     * @param nome nome a ser cadastrado
+     * @param email email a ser cadastrado
      */
     public Dados(String funcao, String nome, String email) {
         this.funcao = funcao;
@@ -19,7 +19,7 @@ public class Dados {
 
     /**
      * Método que representa o estado do objeto item
-     * @return
+     * @return ToString
      */
     @Override
     public String toString() {
