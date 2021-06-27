@@ -5,12 +5,22 @@ import Kubota.Ferreira.Eiki.Igor.Enums.TiposMembros;
 
 public class BigBrothers extends Membro{
 
+
+    /**
+     * Metodo/Classe que representa a função BigBrothers
+     * @param nome nome do integrante
+     * @param email email do integrante
+     * @param funcao funcao do integrante
+     */
     public BigBrothers(String nome, String email, TiposMembros funcao){
         super(nome, email, funcao);
 
     }
 
 
+    /**
+     * Organiza em uma "Tabela"
+     */
     @Override
     public void ExibirRelatorio() {
         System.out.println(
@@ -20,6 +30,11 @@ public class BigBrothers extends Membro{
         );
     }
 
+
+    /**
+     * Metodo que retorna uma determinada mensagem conforme o horário selecionado
+     * @param horario horario do expediente, pode ser normal ou extra
+     */
     @Override
     public void Mensagem(Horarios horario) {
         switch (horario) {
