@@ -39,16 +39,20 @@ public class ScriptGuys extends Membro{
     @Override
     public void Mensagem(Horarios horario){
         switch (horario) {
-            default:
-                break;
+
+            //Em Horario Regular
             case REGULAR:
                 System.out.println(getFuncao()+" de nome "+getNome() + ": ");
                 System.out.println("Prazer em ajudar novos amigos de código!\n");
                 break;
-                
+
+            //Em Horario Extra
             case EXTRA:
                 System.out.println(getFuncao()+" de nome "+getNome() + ": ");
                 System.out.println("QU3Ro_S3us_r3curs0s.py\n");
+                break;
+
+            default:
                 break;
         }
 

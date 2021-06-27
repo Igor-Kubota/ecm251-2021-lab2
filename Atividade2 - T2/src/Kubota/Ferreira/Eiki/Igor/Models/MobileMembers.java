@@ -40,19 +40,21 @@ public class MobileMembers extends Membro{
     @Override
     public void Mensagem(Horarios horario) {
         switch (horario) {
-            default:
-                break;
+
+            //Em Horario Regular
             case REGULAR:
                 System.out.println(getFuncao()+" de nome "+getNome() + ": ");
                 System.out.println("Happy Coding!\n");
                 break;
 
+            //Em Horario Extra
             case EXTRA:
                 System.out.println(getFuncao()+" de nome "+getNome() + ": ");
                 System.out.println("Happy_C0d1ng. Maskers.\n");
                 break;
+
+            default:
+                break;
         }
-
-
     }
 }

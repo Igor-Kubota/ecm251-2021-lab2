@@ -38,16 +38,20 @@ public class BigBrothers extends Membro{
     @Override
     public void Mensagem(Horarios horario) {
         switch (horario) {
-            default:
-                break;
+
+            //Em Horario Regular
             case REGULAR:
                 System.out.println(getFuncao()+" de nome "+getNome() + ": ");
                 System.out.println("Sempre ajudando as pessoas membros ou não S2!\n");
                 break;
 
+            //Em Horario Extra
             case EXTRA:
                 System.out.println(getFuncao()+" de nome "+getNome() + ": ");
                 System.out.println("...\n");
+                break;
+
+            default:
                 break;
         }
     }

@@ -38,16 +38,20 @@ public class HeavyLifters extends Membro{
      */
     public void Mensagem(Horarios horario) {
         switch (horario) {
-            default:
-                break;
+
+            //Em Horario Regular
             case REGULAR:
                 System.out.println(getFuncao()+" de nome "+getNome() + ": ");
                 System.out.println("Podem contar conosco!\n");
                 break;
 
+            //Em Horario Extra
             case EXTRA:
                 System.out.println(getFuncao()+" de nome "+getNome() + ": ");
                 System.out.println("N00b_qu3_n_Se_r3pita.bat\n");
+                break;
+
+            default:
                 break;
         }
 
